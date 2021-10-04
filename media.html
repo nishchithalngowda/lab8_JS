@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Image Maps</h2>
+<p>Click on the sun, the cave, or the right of the ajantha cave to go to sun document and places information:</p>
+
+<img src="ajanta.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="sun" href="https://www.tripadvisor.in/ShowUserReviews-g681052-d2535805-r403465812-Ajanta_Caves-Ajanta_Aurangabad_District_Maharashtra.html">
+  <area shape="rect" coords="290,172,333,250" alt="sun" href="sun.html">
+  <area shape="circle" coords="337,300,44" alt="cave" href="https://www.britannica.com/place/Ajanta-Caves">
+</map>
+<script>
+function myFunction() {
+  alert("You clicked the sun!");
+}
+</script>
+
+
+<div class="transbox">
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="redfort.jpg" style="width:100%">  </div>
+
+  <div class="mySlides fade">
+    <img src="hampi.jpg" style="width:100%">  </div>
+
+  <div class="mySlides fade">
+    <img src="ajanta.jpg" style="width:100%">  </div>
+
+<div class="mySlides fade">
+  <img src="taj.jpg" style="width:100%">  </div>
+
+<div class="mySlides fade">
+  <img src="jaisalmer.jpg" style="width:100%">  </div>
+</div>
+<br>
+
+<div class="transbox">
+
+</div>
+
+
+
+
+<style>
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.transbox{
+    text-align:center;
+    background-color: rgb(37, 4, 10  );
+    border:2px solid: #25040A;
+}
+
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+
+
+
+}
+</style>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
